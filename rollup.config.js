@@ -20,6 +20,22 @@
    showBrotliSize: false,
    showMinifiedSize: false,
  };
+
+ const babelConfig = {
+  babelrc: false,
+  ...{
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          targets: {
+            ie: '11',
+          },
+        },
+      ],
+    ],
+  },
+};
  
  const copyConfig = {
    targets: [
@@ -32,17 +48,15 @@
  };
  
  const configs = [
-   // The main JavaScript bundle for older browsers that don't support
-   // JavaScript modules or ES2015+.
    {
      input: ['src/app.js'],
      output: {
        file: 'dist/app-ie.js',
-       format: 'iife',
+       format: 'systemjs',
      },
      plugins: [
        minifyHTML(),
-       babel(),
+       babel(babelConfig),
        resolve(),
        copy(copyConfig)
      ],
