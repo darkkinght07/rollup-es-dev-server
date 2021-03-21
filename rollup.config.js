@@ -14,7 +14,6 @@ const filesizeConfig = {
 const copyConfig = {
   targets: [
     { src: 'node_modules/@webcomponents', dest: 'dist/node_modules' },
-    { src: 'node_modules/systemjs/dist/s.min.js', dest: 'dist/node_modules/systemjs/dist' },
     { src: 'images', dest: 'dist' },
     { src: 'data', dest: 'dist' },
     { src: 'index-for-dist.html', dest: 'dist', rename: 'index.html' },
