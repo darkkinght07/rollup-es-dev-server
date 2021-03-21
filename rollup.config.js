@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
@@ -26,11 +26,11 @@ const configs = [
     input: ['src/app.js'],
     output: {
       file: 'dist/app-ie.js',
-      format: 'systemjs',
+      format: 'iife',
     },
     plugins: [
       minifyHTML(),
-      babel(),
+      babel({babelHelpers: "bundled"}),
       resolve(),
       copy(copyConfig)
     ],

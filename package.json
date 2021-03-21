@@ -23,7 +23,6 @@
     "@rollup/plugin-node-resolve": "^11.2.0",
     "es-dev-server": "^2.1.0",
     "rollup": "^2.41.0",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-filesize": "^9.0.0",
