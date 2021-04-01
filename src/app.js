@@ -1,4 +1,3 @@
-// import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 import { render, html } from 'lit-html';

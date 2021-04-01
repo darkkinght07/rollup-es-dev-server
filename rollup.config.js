@@ -49,8 +49,7 @@ const configs = [
       nodeResolve({
         jsnext: true,
         main: true
-      }),
-      copy(copyConfig)
+      })
     ],
     preserveEntrySignatures: false,
   }
