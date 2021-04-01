@@ -37,6 +37,22 @@ const configs = [
       copy(copyConfig)
     ],
     preserveEntrySignatures: false,
+  },
+  {
+    input: ['src/app.js'],
+    output: {
+      file: 'dist/app-modern.js',
+      format: 'iife',
+    },
+    plugins: [
+      minifyHTML(),
+      nodeResolve({
+        jsnext: true,
+        main: true
+      }),
+      copy(copyConfig)
+    ],
+    preserveEntrySignatures: false,
   }
 ];
 
